@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Portal - CMS</title>
+</head>
+
+<body class="bg-white text-dark">
+    <div class="container ">
+        <!-- HEADER/ NAVBAR SNIPPET -->
+        <div class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="portal">Property Management Limited - Portal</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <% if (adminRights) { %>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ims">Information Management <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <% } %>
+                        <% if (cmsRights) { %>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="cms">Content Management <span class="sr-only">(current)</span></a>
+                        </li>
+                        <% } %>
+                    </ul>
+                    <li class="nav-item navbar-nav">
+                        <a class="nav-link" href="logout">Log out</a>
+                    </li>
+                </div>
+            </nav>
+        </div>
+        <!-- LOGIN PAGE CONTENT -->
+        <div class="content">
+            <h5>💻: <%=user.toUpperCase()%></h5>
+            <div class="row">
+                <div class="text-center">
+                    <h1 style="padding:30px">CMS - Content Management System</h1>
+                </div>
+            </div>
+            <div class="row" style="padding:30px">
+                <div class="col-sm-3">
+                    <div class="btn-group-vertical">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                                Marketing
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="cms?menu=1&subMenu=1">News</a>
+                                <a class="dropdown-item" href="cms?menu=1&subMenu=2">Offers</a>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                                Manage Property Details
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="cms?menu=2&subMenu=1">View/Edit Sale Properties</a>
+                                <a class="dropdown-item" href="cms?menu=2&subMenu=2">View/Edit Rental Properties</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="card bg-dark">
+                        <div class="card-body bg-secondary">
+                            <div class="cms-content bg-light rounded p-2">
+                                <% if (cardInnerHTML) { %>
+                                <%-unescape(cardInnerHTML)%>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER SNIPPET -->
+        <div class="bg-dark text-light footer">
+            <div class="card-deck">
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+
+                    </div>
+                </div>
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+
+                    </div>
+                </div>
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+
+                    </div>
+                </div>
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

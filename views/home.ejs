@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Property Management - Home</title>
+</head>
+
+<body class="bg-white text-dark">
+    <div class="container ">
+        <!-- HEADER/ NAVBAR SNIPPET -->
+        <div class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/">Property Management Limited</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/buy">Buy <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/rent">Rent <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sell">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                    <li class="nav-item navbar-nav">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </div>
+            </nav>
+        </div>
+
+        <!-- HOME PAGE CONTENT -->
+
+        <img src="https://picsum.photos/id/1031/1200/300" class="img-fluid" alt="Responsive image">
+        <div class="content">
+            <div class="text-center">
+                <h1 style="padding:30px">Welcome to Property Management Limited</h1>
+                <div class="card-deck">
+                    <div class="card col-sm-3 border-dark mb-5" style="padding:2px">
+                        <img img src="https://picsum.photos/id/236/200/100" class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Are you thinking of selling a home or commercial property?</p>
+                            <a href="sell" class="btn btn-dark">Sales Valuation</a>
+                        </div>
+                    </div>
+                    <div class="card col-sm-3 border-dark mb-5" style="padding:2px">
+                        <img img src="https://picsum.photos/id/1075/200/100" class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Are you thinking of letting your property? Learn about our Management
+                                Services.</p>
+                            <a href="contact" class="btn btn-dark">Find out more</a>
+                        </div>
+                    </div>
+                    <div class="card col-sm-3 border-dark mb-5" style="padding:2px">
+                        <img img src="https://picsum.photos/id/238/200/100" class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Looking to buy property? We have a diverse portfolio of properties on
+                                market.</p>
+                            <a href="buy" class="btn btn-dark">Browse listings</a>
+                        </div>
+                    </div>
+                    <div class="card col-sm-3 border-dark mb-5" style="padding:2px">
+                        <img img src="https://picsum.photos/id/341/200/100" class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Request a consultation with one of our accredited real estate agents.
+                            </p>
+                            <a href="contact" class="btn btn-dark">Request a consultation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-deck">
+                    <div class="card col-sm-6 border-dark mb-5" style="padding:2px">
+                        <div class="card-header">
+                            <h4> <%=offerTitle%></h4>
+                        </div>
+                        <img src=<%-unescape(offerImage)%> class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text"> <%=offerDescription%></p>
+                        </div>
+                    </div>
+                    <div class="card col-sm-6 border-dark mb-5" style="padding:2px">
+                        <div class="card-header">
+                            <h4><%=newsTitle%></h4>
+                        </div>
+                        <img src=<%-unescape(newsImage)%> class="img-fluid card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text"> <%=newsDescription%></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER SNIPPET -->
+        <div class="bg-dark text-light footer">
+            <div class="card-deck">
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+                        <p class="card-text"><strong> <a href="#">Terms of Use</a> </br><a href="#">Privacy & Cookie
+                                    Policy</a></strong></p>
+                        <p class="card-text"><strong>Website Design: </strong></br>Your Name</p>
+
+                    </div>
+                </div>
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+                        <p class="card-text">
+                            <strong>Contact Information:</strong><br>
+                            086 8769012 <br>
+                            info@propertyMng.com<br>
+                            <strong>Fax:</strong> <br>01 389 3783</p>
+                    </div>
+                </div>
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+                        <p class="card-text">
+                            <strong>Office Location:</strong><br>
+                            The old mill <br>
+                            Dublin 4<br>
+                            Ireland<br>
+                            D4 h5673</p>
+                    </div>
+                </div>
+                <div class="card col-sm-3 bg-dark">
+                    <div class="card-body bg-dark">
+                        <p class="card-text"><strong>Connect with us on social media:</strong></p>
+                        <div class="row">
+                            <div class="col">
+                                <a href="#"><img img
+                                        src="https://68ef2f69c7787d4078ac-7864ae55ba174c40683f10ab811d9167.ssl.cf1.rackcdn.com/facebook-icon_64x64.png"
+                                        class="img-fluid card-img-top" alt="..."></a>
+                            </div>
+                            <div class="col">
+                                <a href="#"><img img
+                                        src="https://68ef2f69c7787d4078ac-7864ae55ba174c40683f10ab811d9167.ssl.cf1.rackcdn.com/twitter-icon_64x64.png"
+                                        href="#" class="img-fluid card-img-top" alt="..."></a>
+                            </div>
+                            <div class="col">
+                                <a href="#"><img img
+                                        src="https://68ef2f69c7787d4078ac-7864ae55ba174c40683f10ab811d9167.ssl.cf1.rackcdn.com/instagram-icon_64x64.png"
+                                        href="#" class="img-fluid card-img-top" alt="..."></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

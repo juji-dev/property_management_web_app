@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Property Management - Buy</title>
+</head>
+
+<body class="bg-white text-dark">
+    <div class="container ">
+        <!-- HEADER/ NAVBAR SNIPPET -->
+        <div class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/">Property Management Limited</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/buy">Buy <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/rent">Rent <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sell">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                    <li class="nav-item navbar-nav">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </div>
+            </nav>
+        </div>
+
+        <img src="https://picsum.photos/id/1031/1200/300" class="img-fluid" alt="Responsive image">
+        <div class="content">
+            <div class="text-center">
+                <h1 style="padding:30px">Looking to buy your next property?</h1>
+            </div>
+            <div class="buy-portal" style="padding-bottom:30px">
+                <!-- SEARCH FORM      <a class="dropdown-item" href="ims?menu=1&subMenu=1">View/Edit Users</a> -->
+                <div class="card col-sm-12 bg-dark">
+                    <div class="card-body bg-dark">
+                        <!--SEARCH FORM -->
+                        <form action="search-properties" method="POST">
+                            <input id="isRental" name="isRental" value="false" type="hidden">
+                            <!-- DROPDOWN FOR AREA -->
+                            <div class="form-row align-items-center">
+                                <div class="col-auto my-1">
+                                    <label class="mr-sm-2" style="color:white;" for="Area">Area</label>
+                                    <input class="form-control mr-sm-2" type="text" placeholder="" id="Area"
+                                        name="Area">
+                                </div>
+                                <!-- MIN COST DROPDOWN -->
+                                <div class="col-auto my-1">
+                                    <label class="mr-sm-2" style="color:white;" for="MinPrice">Min Price</label>
+                                    <select class="custom-select mr-sm-2" id="MinPrice" name="MinPrice">
+                                        <option selected value="1">0</option>
+                                        <option value="2">25,000</option>
+                                        <option value="3">50,000</option>
+                                        <option value="4">75,000</option>
+                                        <option value="5">100,000</option>
+                                        <option value="6">150,000</option>
+                                        <option value="7">200,000</option>
+                                        <option value="8">300,000</option>
+                                        <option value="9">500,000</option>
+                                    </select>
+                                </div>
+                                <!-- MAX COST DROPDOWN -->
+                                <div class="col-auto my-1">
+                                    <label class="mr-sm-2" style="color:white;" for="MaxPrice">Max Price</label>
+                                    <select class="custom-select mr-sm-2" id="MaxPrice" name="MaxPrice">
+                                        <option value="1">25,000</option>
+                                        <option value="2">50,000</option>
+                                        <option value="3">75,000</option>
+                                        <option value="4">100,000</option>
+                                        <option value="5">150,000</option>
+                                        <option value="6">200,000</option>
+                                        <option value="7">300,000</option>
+                                        <option value="8">500,000</option>
+                                        <option value="9">750,000</option>
+                                        <option selected value="10">No Maximum</option>
+                                    </select>
+                                </div>
+                                <!-- MIN BEDROOM DROPDOWN -->
+                                <div class="col-auto my-1">
+                                    <label class="mr-sm-2" style="color:white;" for="MinBedroom">Min Bedrooms</label>
+                                    <select class="custom-select mr-sm-2" id="MinBedroom" name="MinBedroom">
+                                        <option selected value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <!-- MIN BATHROOM DROPDOWN -->
+                                <div class="col-auto my-1">
+                                    <label class="mr-sm-2" style="color:white;" for="MinBathroom">Min Bathrooms</label>
+                                    <select class="custom-select mr-sm-2" id="MinBathroom" name="MinBathroom">
+                                        <option selected value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <!-- PROPERTY TYPE DROPDOWN -->
+
+                                <!-- SORT BY DROPDOWN -->
+                                <div class="col-auto my-1">
+                                    <label class="mr-sm-1" style="color:white;" for="SortBy">Sort By</label>
+                                    <select class="custom-select mr-sm-2" id="SortBy" name="SortBy">
+                                        <option value="1">Price Ascending</option>
+                                        <option value="2">Price Decending</option>
+                                        <option selected value="3">Best Match</option>
+                                    </select>
+                                </div>
+                                <!-- SEARCH BUTTON -->
+                                <div class="col-auto my-1">
+                                    <button type="submit" id="search" class="btn btn-secondary">Submit</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- SEARCH RESULTS  -->
+            <div class="card col-sm-12 bg-dark">
+                <div class="card-body bg-dark">
+                    <% if (searchResults) { %>
+                    <%-unescape(searchResults)%>
+                    <% } %>
+                </div>
+            </div>
+            <!-- FOOTER SNIPPET -->
+            <div class="bg-dark text-light footer">
+                <div class="card-deck">
+                    <div class="card col-sm-3 bg-dark">
+                        <div class="card-body bg-dark">
+                            <p class="card-text"><strong> <a href="#">Terms of Use</a> </br><a href="#">Privacy & Cookie
+                                        Policy</a></strong></p>
+                            <p class="card-text"><strong>Website Design: </strong></br>Your Name</p>
+
+                        </div>
+                    </div>
+                    <div class="card col-sm-3 bg-dark">
+                        <div class="card-body bg-dark">
+                            <p class="card-text">
+                                <strong>Contact Information:</strong><br>
+                                086 8769012 <br>
+                                info@propertyMng.com<br>
+                                <strong>Fax:</strong> <br>01 389 3783</p>
+                        </div>
+                    </div>
+                    <div class="card col-sm-3 bg-dark">
+                        <div class="card-body bg-dark">
+                            <p class="card-text">
+                                <strong>Office Location:</strong><br>
+                                The old mill <br>
+                                Dublin 4<br>
+                                Ireland<br>
+                                D4 h5673</p>
+                        </div>
+                    </div>
+                    <div class="card col-sm-3 bg-dark">
+                        <div class="card-body bg-dark">
+                            <p class="card-text"><strong>Connect with us on social media:</strong></p>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#"><img img
+                                            src="https://68ef2f69c7787d4078ac-7864ae55ba174c40683f10ab811d9167.ssl.cf1.rackcdn.com/facebook-icon_64x64.png"
+                                            class="img-fluid card-img-top" alt="..."></a>
+                                </div>
+                                <div class="col">
+                                    <a href="#"><img img
+                                            src="https://68ef2f69c7787d4078ac-7864ae55ba174c40683f10ab811d9167.ssl.cf1.rackcdn.com/twitter-icon_64x64.png"
+                                            href="#" class="img-fluid card-img-top" alt="..."></a>
+                                </div>
+                                <div class="col">
+                                    <a href="#"><img img
+                                            src="https://68ef2f69c7787d4078ac-7864ae55ba174c40683f10ab811d9167.ssl.cf1.rackcdn.com/instagram-icon_64x64.png"
+                                            href="#" class="img-fluid card-img-top" alt="..."></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
